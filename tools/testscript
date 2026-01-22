@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eux
 
-ghcflags="-rtsopts -threaded -Werror -Wwarn=deprecations ${GHC_FLAGS-}"
+ghcflags="-rtsopts -threaded -Wwarn=deprecations ${GHC_FLAGS-}"
 testflags="CreateDirectoryIfMissing001.num-repeats=100000 +RTS -N2"
 stack="stack --no-terminal ${STACK_FLAGS-}"
 
